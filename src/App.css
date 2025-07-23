@@ -1,0 +1,263 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  background-color: #1a237e;
+  color: white;
+  border-radius: 8px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.2rem;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 300px;
+  font-size: 1rem;
+}
+
+  .filter-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.filter-container select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.date-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Stats Panel */
+.stats-panel {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.stats-panel h2 {
+  margin-bottom: 15px;
+  color: #1a237e;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.stat-box {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  color: #1a237e;
+}
+
+.stat-box p {
+  color: #666;
+}
+
+.content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.artwork-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Art Card */
+.art-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.art-card:hover {
+  transform: translateY(-5px);
+}
+
+.art-image {
+  height: 250px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.art-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.no-image {
+  color: #999;
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+}
+
+.art-info {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.art-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #1a237e;
+}
+
+.art-info p {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.view-more {
+  margin-top: auto;
+  text-align: right;
+  padding-top: 10px;
+}
+
+.view-more a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #1a237e;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.view-more a:hover {
+  background-color: #303f9f;
+}
+
+/* Loading and Error States */
+.loading, .error, .no-results {
+  padding: 40px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.loading {
+  color: #1a237e;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+.no-results {
+  color: #666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-container input {
+    width: 100%;
+  }
+  
+  .filter-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .artwork-list {
+    grid-template-columns: 1fr;
+  }
+}
+.welcome {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.welcome h2 {
+  color: #1a237e;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.welcome p {
+  color: #555;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
